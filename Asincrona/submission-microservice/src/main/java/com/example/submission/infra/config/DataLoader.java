@@ -29,8 +29,8 @@ public class DataLoader implements CommandLineRunner {
             Professor p3 = new Professor("Dr. Carlos Perez", "carlos@unicauca.edu.co");
 
             // Estudiantes
-            Student s1 = new Student("Laura Lopez", "laura@unicauca.edu.co");
-            Student s2 = new Student("Marcos Jimenez", "marcos@unicauca.edu.co");
+            Student s1 = new Student("Laura Lopez", "laura@unicauca.edu.co", "@Laura123");
+            Student s2 = new Student("Marcos Jimenez", "marcos@unicauca.edu.co", "@Marcos123");
 
             professorRepository.save(p1);
             professorRepository.save(p2);
@@ -39,7 +39,7 @@ public class DataLoader implements CommandLineRunner {
             studentRepository.save(s1);
             studentRepository.save(s2);
 
-            System.out.println("✅ Profesores y estudiantes cargados correctamente.");
+            System.out.println("Profesores y estudiantes cargados correctamente.");
         }
     }
 }

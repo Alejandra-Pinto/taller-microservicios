@@ -11,6 +11,7 @@ public class Student {
 
     private String name;
     private String email;
+    private String password;
 
     @OneToMany(mappedBy = "student1")
     private List<DegreeWork> degreeWorksAsStudent1;
@@ -21,9 +22,10 @@ public class Student {
     public Student() {
     }
     
-    public Student(String name, String email) {
+    public Student(String name, String email, String password) {
         this.name = name;
         this.email = email;
+        this.password = password;
     }
 
     public Long getId() { return id; }
@@ -34,4 +36,7 @@ public class Student {
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
 }

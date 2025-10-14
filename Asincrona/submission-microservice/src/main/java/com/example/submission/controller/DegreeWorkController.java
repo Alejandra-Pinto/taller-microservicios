@@ -3,7 +3,6 @@ package com.example.submission.controller;
 import com.example.submission.entity.DegreeWork;
 import com.example.submission.infra.dto.DegreeWorkRequest;
 import com.example.submission.service.IDegreeWorkService;
-import com.example.submission.service.DegreeWorkService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
