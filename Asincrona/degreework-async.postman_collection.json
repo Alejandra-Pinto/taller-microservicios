@@ -1,0 +1,77 @@
+{
+    "info": {
+        "_postman_id": "c7a7a28f-1c4a-4f5b-bb11-123456789abc",
+        "name": "degreework-async",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "gpt5"
+    },
+    "item": [
+        {
+            "name": "Create DegreeWork (Submission)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"Sistema de monitoreo de cultivos\",\n    \"modality\": \"Investigacion\",\n    \"student1\": \"1\",\n    \"student2\": \"2\",\n    \"creationDate\": \"2025-10-13\",\n    \"director\": \"1\",\n    \"coDirector1\": \"2\",\n    \"generalObjective\": \"Desarrollar un sistema IoT para monitoreo ambiental\",\n    \"specificObjectives\": [\n        \"Recolectar datos de humedad y temperatura\",\n        \"Disenar la arquitectura IoT\",\n        \"Implementar un dashboard de visualizacion\"\n    ],\n    \"estadoP\": \"ANTEPROYECTO\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/degreeworks",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "degreeworks"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get All DegreeWorks (Submission)",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/degreeworks",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "degreeworks"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get All Notifications (Notification)",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8082/api/notifications",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8082",
+                    "path": [
+                        "api",
+                        "notifications"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
