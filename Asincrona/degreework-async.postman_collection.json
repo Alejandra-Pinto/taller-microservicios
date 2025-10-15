@@ -2,74 +2,10 @@
     "info": {
         "_postman_id": "c7a7a28f-1c4a-4f5b-bb11-123456789abc",
         "name": "degreework-async",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "_exporter_id": "gpt5"
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
-        {
-            "name": "Create Student (Submission)",
-            "request": {
-                "method": "POST",
-                "header": [
-                    { "key": "Content-Type", "value": "application/json" }
-                ],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"name\": \"Laura Lopez\",\n    \"email\": \"laura@example.com\",\n    \"password\": \"123456\"\n}"
-                },
-                "url": {
-                    "raw": "http://localhost:8081/api/students",
-                    "protocol": "http",
-                    "host": ["localhost"],
-                    "port": "8081",
-                    "path": ["api", "students"]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Get All Students (Submission)",
-            "request": {
-                "method": "GET",
-                "url": {
-                    "raw": "http://localhost:8081/api/students",
-                    "protocol": "http",
-                    "host": ["localhost"],
-                    "port": "8081",
-                    "path": ["api", "students"]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Get Student By ID (Submission)",
-            "request": {
-                "method": "GET",
-                "url": {
-                    "raw": "http://localhost:8081/api/students/1",
-                    "protocol": "http",
-                    "host": ["localhost"],
-                    "port": "8081",
-                    "path": ["api", "students", "1"]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Delete Student (Submission)",
-            "request": {
-                "method": "DELETE",
-                "url": {
-                    "raw": "http://localhost:8081/api/students/1",
-                    "protocol": "http",
-                    "host": ["localhost"],
-                    "port": "8081",
-                    "path": ["api", "students", "1"]
-                }
-            },
-            "response": []
-        },
-        {
+                {
             "name": "Create DegreeWork (Submission)",
             "request": {
                 "method": "POST",
