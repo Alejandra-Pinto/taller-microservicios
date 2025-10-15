@@ -1,18 +1,16 @@
 package com.example.notification.entity;
 
 import com.example.notification.entity.enums.EstadoDocumento;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 
-@Entity
+
 public class Document {
-    @Id
+    
     private Long id;
     private String url;
 
-    @Enumerated(EnumType.STRING)
     private EstadoDocumento estado;
 
-    @ManyToOne
     private DegreeWork degreeWork;
 
     // getters/setters

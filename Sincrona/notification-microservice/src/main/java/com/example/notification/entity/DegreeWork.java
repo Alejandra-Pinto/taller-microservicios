@@ -1,36 +1,32 @@
 package com.example.notification.entity;
 
 import com.example.notification.entity.enums.EstadoDegreeWork;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import java.util.List;
 
-@Entity
+
 public class DegreeWork {
-    @Id
+    
     private Long id;
     private String title;
     private String modality;
     private String creationDate;
     private String generalObjective;
 
-    @ElementCollection
     private List<String> specificObjectives;
 
-    @Enumerated(EnumType.STRING)
     private EstadoDegreeWork estadoP;
 
-    @ManyToOne
     private Student student1;
-    @ManyToOne
+
     private Student student2;
-    @ManyToOne
+
     private Professor director;
-    @ManyToOne
+
     private Professor coDirector1;
-    @ManyToOne
+
     private Professor coDirector2;
 
-    @OneToMany(mappedBy = "degreeWork", cascade = CascadeType.ALL)
     private List<Document> documents;
 
     // getters/setters

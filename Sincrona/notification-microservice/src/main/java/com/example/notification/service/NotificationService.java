@@ -20,7 +20,7 @@ public class NotificationService {
         this.emailSimulator = emailSimulator;
     }
 
-    // 🔹 Método para procesar notificaciones recibidas de DegreeWork
+    // Método para procesar notificaciones recibidas de DegreeWork
     public void processDegreeWork(DegreeWork degreeWork) {
         logger.info("Nuevo trabajo de grado recibido: {}", degreeWork.getTitle());
 
