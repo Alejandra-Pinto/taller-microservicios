@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "c7a7a28f-1c4a-4f5b-bb11-sync-communication",
+    "name": "degreework-sync",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "gpt5"
+  },
+  "item": [
+    {
+      "name": "Create Student (Submission)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Laura Lopez\",\n    \"email\": \"laura@example.com\",\n    \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "students"]
+        }
+      }
+    },
+    {
+      "name": "Get All Students (Submission)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "students"]
+        }
+      }
+    },
+    {
+      "name": "Get Student By ID (Submission)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Student (Submission)",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8081/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create DegreeWork (Synchronous Call to Notification)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Sistema de monitoreo de cultivos\",\n    \"modality\": \"Investigacion\",\n    \"creationDate\": \"2025-10-13\",\n    \"generalObjective\": \"Desarrollar un sistema IoT para monitoreo ambiental\",\n    \"specificObjectives\": [\n        \"Recolectar datos de humedad y temperatura\",\n        \"Diseñar la arquitectura IoT\",\n        \"Implementar un dashboard de visualización\"\n    ],\n    \"estadoP\": \"ANTEPROYECTO\",\n    \"student1Id\": 1,\n    \"student2Id\": 2,\n    \"directorId\": 1,\n    \"coDirector1Id\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/degreeworks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "degreeworks"]
+        }
+      }
+    },
+    {
+      "name": "Get All DegreeWorks (Submission)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/degreeworks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "degreeworks"]
+        }
+      }
+    },
+    {
+      "name": "Trigger Notification Manually (Notification)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Proyecto de prueba\",\n    \"modality\": \"Desarrollo\",\n    \"creationDate\": \"2025-10-14\",\n    \"generalObjective\": \"Validar comunicación sincrónica\",\n    \"specificObjectives\": [\"Simular el envío desde Postman\"],\n    \"estadoP\": \"FORMATO_A\",\n    \"student1\": {\"name\": \"Laura Lopez\", \"email\": \"laura@example.com\"},\n    \"director\": {\"name\": \"Juan Perez\", \"email\": \"juanp@unicauca.edu.co\"}\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/notifications/degreework",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "notifications", "degreework"]
+        }
+      }
+    },
+    {
+      "name": "Get All Notifications (Notification)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/notifications",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "notifications"]
+        }
+      }
+    }
+  ]
+}
